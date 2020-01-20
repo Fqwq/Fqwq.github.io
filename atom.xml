@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Fqwq.github.io</id>
     <title>吞噬次元のqwq巨兽</title>
-    <updated>2020-01-20T02:53:13.098Z</updated>
+    <updated>2020-01-20T08:19:01.237Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Fqwq.github.io"/>
     <link rel="self" href="https://Fqwq.github.io/atom.xml"/>
@@ -11,9 +11,38 @@
     <icon>https://Fqwq.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 吞噬次元のqwq巨兽</rights>
     <entry>
+        <title type="html"><![CDATA[调整ic2各个发电机组发电功率！(还想什么,削风电啊)]]></title>
+        <id>https://Fqwq.github.io/diao-zheng-ic2-ge-ge-fa-dian-ji-zu-fa-dian-gong-lu-huan-xiang-shi-me-xue-feng-dian-a</id>
+        <link href="https://Fqwq.github.io/diao-zheng-ic2-ge-ge-fa-dian-ji-zu-fa-dian-gong-lu-huan-xiang-shi-me-xue-feng-dian-a">
+        </link>
+        <updated>2020-01-20T07:36:06.000Z</updated>
+        <content type="html"><![CDATA[<p>关于ic2里的风电发电效率相信我不用再说 (笔者热核党 当发现我核电没有人家风电来的简单 还无脑发电还那么高..那种*了犬的心情...)<br>
+但事实上在配置文件里同各种设定都可更改  这无疑给想要在服务器做一些魔改以及特色的人士带来极大的便利</p>
+<p>那么ww<br>
+我们来看方法是什么（其实过分简单）<br>
+在**.minecraft文件夹下config(并非mod文件夹)**里找到ic2.ini<br>
+找到Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量这里)</p>
+<p><em>如果使用notepad++会更好，此处为了方便演示以notepad++的打开方式举例，另外不同版本的ic2的该设定可能在配置的不同位置，请以Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量)为准</em></p>
+<p>在60行左右即可找到，从Base energy generation factors - increase for higher energy yield.往下后面带有代表赋值的等于号的数字那里，1.0表示倍数<br>
+可以修改这里的变量来进行修改发电机组的发电效率倍率<br>
+从第一个往下依次为发电机、地热、水力(配置中注释了说弃用，原因是大概有了更好的发电方式也就是风电)、太阳能、风、核、半流体油、半流体生物质、半流体生物乙醇、半流体沼气、固体、放射性同位素、电气   (机翻)<br>
+在个人测试之后 发现风力设置在0.75~0.8的系数里即可达到合理的发电 核电嘛(自己是核电党所以偏袒了核电发电效率)<br>
+需要注意的是热核电在这栏提高之后是无效的 因为热核实质是靠蒸汽进行动力转换为电力的<br>
+所以需要在下方的提高热产量那栏更改<br>
+——别告诉我看不懂英文 机翻不会嘛——</p>
+<figure data-type="image" tabindex="1"><img src="https://Fqwq.github.io/post-images/1579507842822.png" alt="" loading="lazy"></figure>
+<p>这篇配置通篇都可以拿去放到百度翻译里翻译<br>
+你会发现通过旁边的注释可以找到很多可以魔改的东西（福利啊！简直是福利！）比如核弹启用(好评的是关闭后直接核弹在合成表消失了)<br>
+以及工业tnt 和核反应堆爆炸范围 当然你也可以改为0 不爆炸不破坏地形(服务器福利)<br>
+那么也可以修改一些产生动能的效率比例 涡轮的耐久 蒸汽机钙化的最大值以及各种细节</p>
+<p>mcbbs上的新人发帖(搭建完自己的博客之后我就把它从mcbbs上挪到这了) 吞噬次元的qwq巨兽整理 配合魔改食用更佳</p>
+<p>最后喊一句 <strong>核电赛高！</strong></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Link Start! [新世界の门!自搭博客]]]></title>
-        <id>https://Fqwq.github.io/post/link-start-xin-shi-jie-nomen-zi-da-bo-ke</id>
-        <link href="https://Fqwq.github.io/post/link-start-xin-shi-jie-nomen-zi-da-bo-ke">
+        <id>https://Fqwq.github.io/link-start-xin-shi-jie-nomen-zi-da-bo-ke</id>
+        <link href="https://Fqwq.github.io/link-start-xin-shi-jie-nomen-zi-da-bo-ke">
         </link>
         <updated>2020-01-19T10:40:25.000Z</updated>
         <summary type="html"><![CDATA[<p>抛开一切其他自搭博客的好处暂且不论..单说一点 假定你在假期的夜晚快乐的浏览着mcbbs，也许你是一个服务器腐竹，一个op，抑或只是一个某工业服高空流水偷电贼（划去），此时你在问答区看到了一个你可以回答的问题，可能你回答的好，又或者坏，但你把答案写的稍作详细且精美，随后挂在你的博客里，然后在他的回答下面扔出一个链接，附上一句&quot;这个问题以前遇到过 我的blog里有详细的介绍和解释&quot;</p>
