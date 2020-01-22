@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Fqwq.github.io</id>
     <title>吞噬次元のqwq巨兽</title>
-    <updated>2020-01-22T03:49:05.167Z</updated>
+    <updated>2020-01-22T03:52:59.738Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Fqwq.github.io"/>
     <link rel="self" href="https://Fqwq.github.io/atom.xml"/>
@@ -21,19 +21,23 @@
 <p>忆起以前玩的服务器都是一两个小mod，插件都是很基本的东西，就这样都能玩的不亦乐乎，服务器里有说有笑，几十个人挤来挤去，不亦乐乎<br>
 之后攒了点零花钱自己也开了一个面板服，mod插件这些也都很轻量，每天大概能有10几个人一起玩，虽然面板服卡的死去活来，但大家也还算玩的尽兴，可惜最后和合资的小伙伴闹掰了，这时候还在上初中</p>
 </blockquote>
+<blockquote>
+<p>现在上了大学，因为有去打零工，可以支配的钱更多了，就在今年年初开了一个VPS的服务器，月开销700多，还是和以前一样的模式，轻量的mod【暮色-工业-交错世界】和基础的插件，想着应该可以提供给大家比较好的游玩体验</p>
+</blockquote>
 ]]></summary>
         <content type="html"><![CDATA[<p>某日在mcbbs茶馆发现了如下这样一个问题，此篇内容在论坛上写下回答之后巨兽我就<s>白嫖人气</s>整理下来了</p>
 <blockquote>
 <p>忆起以前玩的服务器都是一两个小mod，插件都是很基本的东西，就这样都能玩的不亦乐乎，服务器里有说有笑，几十个人挤来挤去，不亦乐乎<br>
 之后攒了点零花钱自己也开了一个面板服，mod插件这些也都很轻量，每天大概能有10几个人一起玩，虽然面板服卡的死去活来，但大家也还算玩的尽兴，可惜最后和合资的小伙伴闹掰了，这时候还在上初中</p>
 </blockquote>
-<!-- more -->
 <blockquote>
 <p>现在上了大学，因为有去打零工，可以支配的钱更多了，就在今年年初开了一个VPS的服务器，月开销700多，还是和以前一样的模式，轻量的mod【暮色-工业-交错世界】和基础的插件，想着应该可以提供给大家比较好的游玩体验</p>
 </blockquote>
+<!-- more -->
 <blockquote>
 <p>可是过了没几天我发现，每天在群里被问最多的就是（现在干嘛？）我很疑惑，这种问题为什么问我？上线一看，他们甚至连个像样的家都没有，地上随意摆了几个箱子，工作台和熔炉，我一翻箱子，里面全是各种各样的宝贝，我问他们为什么不造点东西？他们回答我：没意思</p>
 </blockquote>
+<!-- more -->
 <blockquote>
 <p>可是创造不就是mc最大的意思吗？本想这么回复他们，可最后还是思来想去听了他们的意见后加了更多mod和插件，可能是我落伍了？大家现在都喜欢玩巨多mod的服务器了吧，没想到，他们又开始在群里问我（现在干嘛？）我上线一看，老样子，不过是地上多了几个摆放战利品的箱子，这时候很多玩家开始退群了，理由都是无聊，没意思，期间我也开了一个小号玩，每天就慢慢的打，慢慢的玩，都没有进入过无事可干的境界，我不禁思考</p>
 </blockquote>
@@ -57,8 +61,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[调整ic2各个发电机组发电功率！(还想什么,削风电啊)]]></title>
-        <id>https://Fqwq.github.io/diao-zheng-ic2-ge-ge-fa-dian-ji-zu-fa-dian-gong-lu-huan-xiang-shi-me-xue-feng-dian-a</id>
-        <link href="https://Fqwq.github.io/diao-zheng-ic2-ge-ge-fa-dian-ji-zu-fa-dian-gong-lu-huan-xiang-shi-me-xue-feng-dian-a">
+        <id>https://Fqwq.github.io/20200120153606</id>
+        <link href="https://Fqwq.github.io/20200120153606">
         </link>
         <updated>2020-01-20T07:36:06.000Z</updated>
         <summary type="html"><![CDATA[<p>关于ic2里的风电发电效率相信我不用再说 (笔者热核党 当发现我核电没有人家风电来的简单 还无脑发电还那么高..那种*了犬的心情...)<br>
@@ -90,16 +94,18 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Link Start! [新世界の门!自搭博客]]]></title>
-        <id>https://Fqwq.github.io/link-start-xin-shi-jie-nomen-zi-da-bo-ke</id>
-        <link href="https://Fqwq.github.io/link-start-xin-shi-jie-nomen-zi-da-bo-ke">
+        <id>https://Fqwq.github.io/20200119184025</id>
+        <link href="https://Fqwq.github.io/20200119184025">
         </link>
         <updated>2020-01-19T10:40:25.000Z</updated>
         <summary type="html"><![CDATA[<p>抛开一切其他自搭博客的好处暂且不论..单说一点 假定你在假期的夜晚快乐的浏览着mcbbs，也许你是一个服务器腐竹，一个op，抑或只是一个某工业服高空流水偷电贼（划去）</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>抛开一切其他自搭博客的好处暂且不论..单说一点 假定你在假期的夜晚快乐的浏览着mcbbs，也许你是一个服务器腐竹，一个op，抑或只是一个某工业服高空流水偷电贼（划去）</p>
-<!-- more -->
 <p>，此时你在问答区看到了一个你可以回答的问题，可能你回答的好，又或者坏，但你把答案写的稍作详细且精美，随后挂在你的博客里，然后在他的回答下面扔出一个链接，附上一句&quot;这个问题以前遇到过 我的blog里有详细的介绍和解释&quot;</p>
 <p>——静</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>抛开一切其他自搭博客的好处暂且不论..单说一点 假定你在假期的夜晚快乐的浏览着mcbbs，也许你是一个服务器腐竹，一个op，抑或只是一个某工业服高空流水偷电贼（划去）</p>
+<p>，此时你在问答区看到了一个你可以回答的问题，可能你回答的好，又或者坏，但你把答案写的稍作详细且精美，随后挂在你的博客里，然后在他的回答下面扔出一个链接，附上一句&quot;这个问题以前遇到过 我的blog里有详细的介绍和解释&quot;</p>
+<p>——静</p>
+<!-- more -->
 <p>（哇这个大佬是真的强啊 他有个自己的博客啊欸 哇这个界面 他的回答写在上面真的是行云流水即实在又高大上有层次有*格）</p>
 <p>此时你有没有想自搭博客 说! 不要隐瞒!</p>
 <p>然    而<br>
