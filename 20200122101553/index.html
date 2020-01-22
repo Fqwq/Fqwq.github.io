@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>吞噬次元のqwq巨兽</title>
 <meta name="description" content="欢迎来到巨兽的个人blog空间！在这里，我会努力记录下来一切精彩！" />
-<link rel="shortcut icon" href="https://Fqwq.github.io/favicon.ico?v=1579656836527">
+<link rel="shortcut icon" href="https://Fqwq.github.io/favicon.ico?v=1579664289638">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://Fqwq.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://Fqwq.github.io/images/avatar.png?v=1579656836527" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://Fqwq.github.io/images/avatar.png?v=1579664289638" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">吞噬次元のqwq巨兽</h1>
       </div>
@@ -79,41 +79,46 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">调整ic2各个发电机组发电功率！(还想什么,削风电啊)</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">失去意义的世界—泛谈小服务器玩家流失原因</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-01-20 / 3 min read
+          2020-01-22 / 7 min read
         </div>
         
         <div class="post-content yue">
-          <p>关于ic2里的风电发电效率相信我不用再说 (笔者热核党 当发现我核电没有人家风电来的简单 还无脑发电还那么高..那种*了犬的心情...)<br>
-但事实上在配置文件里同各种设定都可更改  这无疑给想要在服务器做一些魔改以及特色的人士带来极大的便利</p>
+          <p>某日在mcbbs茶馆发现了如下这样一个问题，此篇内容在论坛上写下回答之后巨兽我就<s>白嫖人气</s>整理下来了</p>
+<blockquote>
+<p>忆起以前玩的服务器都是一两个小mod，插件都是很基本的东西，就这样都能玩的不亦乐乎，服务器里有说有笑，几十个人挤来挤去，不亦乐乎<br>
+之后攒了点零花钱自己也开了一个面板服，mod插件这些也都很轻量，每天大概能有10几个人一起玩，虽然面板服卡的死去活来，但大家也还算玩的尽兴，可惜最后和合资的小伙伴闹掰了，这时候还在上初中</p>
+</blockquote>
 <!-- more -->
-<p>那么ww<br>
-我们来看方法是什么（其实过分简单）<br>
-<strong>在.minecraft文件夹下config(并非mod文件夹)里找到ic2.ini</strong><br>
-找到Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量这里)</p>
-<p><em>如果使用notepad++会更好，此处为了方便演示以notepad++的打开方式举例，另外不同版本的ic2的该设定可能在配置的不同位置，请以Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量)为准</em></p>
-<p>在60行左右即可找到，从Base energy generation factors - increase for higher energy yield.往下后面带有代表赋值的等于号的数字那里，1.0表示倍数<br>
-可以修改这里的变量来进行修改发电机组的发电效率倍率<br>
-从第一个往下依次为发电机、地热、水力(配置中注释了说弃用，原因是大概有了更好的发电方式也就是风电)、太阳能、风、核、半流体油、半流体生物质、半流体生物乙醇、半流体沼气、固体、放射性同位素、电气   (机翻)<br>
-在个人测试之后 发现风力设置在0.75~0.8的系数里即可达到合理的发电 核电嘛(自己是核电党所以偏袒了核电发电效率)<br>
-需要注意的是热核电在这栏提高之后是无效的 因为热核实质是靠蒸汽进行动力转换为电力的<br>
-所以需要在下方的提高热产量那栏更改<br>
-——别告诉我看不懂英文 机翻不会嘛——</p>
-<figure data-type="image" tabindex="1"><img src="https://Fqwq.github.io/post-images/1579507842822.png" alt="" loading="lazy"></figure>
-<p>这篇配置通篇都可以拿去放到百度翻译里翻译<br>
-你会发现通过旁边的注释可以找到很多可以魔改的东西（福利啊！简直是福利！）比如核弹启用(好评的是关闭后直接核弹在合成表消失了)<br>
-以及工业tnt 和核反应堆爆炸范围 当然你也可以改为0 不爆炸不破坏地形(服务器福利)<br>
-那么也可以修改一些产生动能的效率比例 涡轮的耐久 蒸汽机钙化的最大值以及各种细节</p>
-<p>mcbbs上的新人发帖(搭建完自己的博客之后我就把它从mcbbs上挪到这了) 吞噬次元的qwq巨兽整理 配合魔改食用更佳</p>
-<p>最后喊一句 <strong>核电赛高！</strong></p>
+<blockquote>
+<p>现在上了大学，因为有去打零工，可以支配的钱更多了，就在今年年初开了一个VPS的服务器，月开销700多，还是和以前一样的模式，轻量的mod【暮色-工业-交错世界】和基础的插件，想着应该可以提供给大家比较好的游玩体验</p>
+</blockquote>
+<blockquote>
+<p>可是过了没几天我发现，每天在群里被问最多的就是（现在干嘛？）我很疑惑，这种问题为什么问我？上线一看，他们甚至连个像样的家都没有，地上随意摆了几个箱子，工作台和熔炉，我一翻箱子，里面全是各种各样的宝贝，我问他们为什么不造点东西？他们回答我：没意思</p>
+</blockquote>
+<blockquote>
+<p>可是创造不就是mc最大的意思吗？本想这么回复他们，可最后还是思来想去听了他们的意见后加了更多mod和插件，可能是我落伍了？大家现在都喜欢玩巨多mod的服务器了吧，没想到，他们又开始在群里问我（现在干嘛？）我上线一看，老样子，不过是地上多了几个摆放战利品的箱子，这时候很多玩家开始退群了，理由都是无聊，没意思，期间我也开了一个小号玩，每天就慢慢的打，慢慢的玩，都没有进入过无事可干的境界，我不禁思考</p>
+</blockquote>
+<blockquote>
+<p>【是我太佛系，还是现在的玩家太挑剔？】直到现在我的服务器已经降低到了日均0人，我每天都在想，我究竟哪里做的不够好，是主城不够漂亮还是公告不够绚丽多彩？还是我开服务器的想法从根本上就已经落伍了？月开销700对我来说绝对是一笔大数字了，就算日均10人我也还会坚持开下去，可是0人.......恐怕我很快就要被淘汰了吧 笑</p>
+</blockquote>
+<blockquote>
+<p>如果可以的话，还请各位指导我现在开服务器的正确姿势，谢谢</p>
+</blockquote>
+<p>讲道理 我感觉看到这篇内容的时候仿佛看见以前我所在某个服务器快乐沙雕时光，所以我花了不少时间总结了一下从那往后学到的经验，<s>事实上是白嫖那一个人气</s></p>
+<p>以往服务器的良好体验造就了一大批服务器开发者，现在的服务器玩家又是残留下来最硬核的玩家，大多都游玩过多个服务器，他们面对大量的服务器选择的势必是含有自己喜欢的模组的服务器，进入服务器之后也会出现虽然是喜欢的模组，但又完全与自己想象中的一样，于原版没有区别，也就是 &quot;没有特色&quot; 这一问题，你放下腐竹的身份去当一个玩家的时候你可能就明白了，现在人们花在游戏上的时间多了，一个不加魔改的服务器正常来讲快的一个星期到一个月不等就毕业了，毕业之后他们拥有了除op权限以外的一切，如何能不感到无聊呢？</p>
+<p>可能你会感到无力 毕竟服务器又不能无上限的增加模组 那么解决方法其实总结了这么长时间依然没有怎么变过，以下拙见，轻点锤</p>
+<p>其实症结主要有两个：过于生硬的玩法 和 毕业线过短<br>
+如果你仔细观察，正常的模组都徘徊在打怪、下矿、合成之中，至多再加一个造家，老玩家对于这些不能说是讨厌，但让玩家一直在这几个点上玩一定是非常糟糕的，于是各个服务器多多少少都加入了RPG的元素，这就是一个不错的解决方式（虽然不能完全解决 但总能改变玩家的玩法疲劳），将玩家从挖矿才能获得材料的坑里拉出来，比如完成一个关于魔法剧情的任务可以获得一个神秘材料，又比如玩家一直执着于前期做出七个风电+碳转子直接跳到中后期，那我们就削弱风电，增强核电而恰好核电需要一定精力去研究铀棒的摆法，也可以让玩家感受到多样性，如果增强热核电(通过核反应堆加热蒸汽机，利用蒸汽动力发电，并再将蒸汽冷却为蒸馏水返回到蒸汽机形成稳定循环)，那绝对是本人的理想了hhhhh，此处魔改ic2发电机倍率的方法我写在了我的另一篇文章里：()[]</p>
+<p>然后我们就涉及到了一个比较麻烦的事情了：毕业线，此前还没有多少方法，但过硬的方法就是魔改合成表，或者是强制玩家去接触一些第三者模组，第三者模组达到某个条件才能回来合成他的目标模组的某个物品，举个栗子，比如我把铁矿魔改为铁矿烧完生成杂质铁锭，此时杂质铁锭啥也做不了，必须再烧一次才能变为铁锭，看起来繁琐，没什么用，但玩家势必会想到用自动化来省去这可恶的流程，这样玩家就能往自动化的路上拐弯了，也有强制的方法，比如工业的打粉机就是需要一个神秘的魔力驱动钉子(自己编的名字，具体实现方法请见下文魔改教程链接)，那么玩家郁闷也必须往那去发展，这是目前我总结出的两种方法，那么具体需要用到cs和mt两个工具，其中cs比较耗费精力，(特别是cs3设置完一次就要重启一次的设定我透)所以也可以适量进行更改，<br>
+对这两个魔改工具的认识可以先看看这个(但是它下面的两个链接里有一个已经失效了)：(https://www.mcbbs.net/thread-666167-1-1.html)[魔改教程-或许我们可以从零开始]<br>
+此处引用大佬的教程帖：(https://www.mcbbs.net/thread-673968-1-1.html)[mt自定义合成链接]   (https://www.mcmod.cn/class/503.html)[cs自定义物品链接]</p>
+<p>最后是一点时事<s>新闻</s>：主要是vv居然又回来支持1710了有点意外，于是写上以便更多人知道</p>
+<p>(朋友制作的(万能朋友) 版权归属于@FI自由~)</p>
 
         </div>
 
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://Fqwq.github.io/c-S-ZvAx4">
-            <span class="flex-auto">Minecraft各类魔改</span>
-          </a>
         
 
 
@@ -122,9 +127,9 @@
 
           
             <div class="next-post">
-              <a href="https://Fqwq.github.io/link-start-xin-shi-jie-nomen-zi-da-bo-ke">
+              <a href="https://Fqwq.github.io/20200120133606">
                 <h3 class="post-title">
-                  Link Start! [新世界の门!自搭博客]
+                  调整ic2各个发电机组发电功率！(还想什么,削风电啊)
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>

@@ -17,7 +17,7 @@
 
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -31,29 +31,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            欢迎来到巨兽的个人blog空间！在这里，我会努力记录下来一切精彩！
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -98,69 +78,71 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="remixicon-article-line"></i>
-          最新文章
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">调整ic2各个发电机组发电功率！(还想什么,削风电啊)</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-01-20 / 3 min read
+        </div>
         
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://Fqwq.github.io/20200122101553">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">失去意义的世界—泛谈小服务器玩家流失原因</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        <p>某日在mcbbs茶馆发现了如下这样一个问题，此篇内容在论坛上写下回答之后巨兽我就<s>白嫖人气</s>整理下来了</p>
-<blockquote>
-<p>忆起以前玩的服务器都是一两个小mod，插件都是很基本的东西，就这样都能玩的不亦乐乎，服务器里有说有笑，几十个人挤来挤去，不亦乐乎<br>
-之后攒了点零花钱自己也开了一个面板服，mod插件这些也都很轻量，每天大概能有10几个人一起玩，虽然面板服卡的死去活来，但大家也还算玩的尽兴，可惜最后和合资的小伙伴闹掰了，这时候还在上初中</p>
-</blockquote>
-
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-01-22 / 7 min read</div>
-    </div>
-  </section>
-
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://Fqwq.github.io/20200120133606">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">调整ic2各个发电机组发电功率！(还想什么,削风电啊)</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        <p>关于ic2里的风电发电效率相信我不用再说 (笔者热核党 当发现我核电没有人家风电来的简单 还无脑发电还那么高..那种*了犬的心情...)<br>
+        <div class="post-content yue">
+          <p>关于ic2里的风电发电效率相信我不用再说 (笔者热核党 当发现我核电没有人家风电来的简单 还无脑发电还那么高..那种*了犬的心情...)<br>
 但事实上在配置文件里同各种设定都可更改  这无疑给想要在服务器做一些魔改以及特色的人士带来极大的便利...</p>
+<!-- more -->
+<p>那么ww<br>
+我们来看方法是什么（其实过分简单）<br>
+<strong>在.minecraft文件夹下config(并非mod文件夹)里找到ic2.ini</strong><br>
+找到Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量这里)</p>
+<p><em>如果使用notepad++会更好，此处为了方便演示以notepad++的打开方式举例，另外不同版本的ic2的该设定可能在配置的不同位置，请以Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量)为准</em></p>
+<p>在60行左右即可找到，从Base energy generation factors - increase for higher energy yield.往下后面带有代表赋值的等于号的数字那里，1.0表示倍数<br>
+可以修改这里的变量来进行修改发电机组的发电效率倍率<br>
+从第一个往下依次为发电机、地热、水力(配置中注释了说弃用，原因是大概有了更好的发电方式也就是风电)、太阳能、风、核、半流体油、半流体生物质、半流体生物乙醇、半流体沼气、固体、放射性同位素、电气   (机翻)<br>
+在个人测试之后 发现风力设置在0.75~0.8的系数里即可达到合理的发电 核电嘛(自己是核电党所以偏袒了核电发电效率)<br>
+需要注意的是热核电在这栏提高之后是无效的 因为热核实质是靠蒸汽进行动力转换为电力的<br>
+所以需要在下方的提高热产量那栏更改<br>
+——别告诉我看不懂英文 机翻不会嘛——</p>
+<figure data-type="image" tabindex="1"><img src="https://Fqwq.github.io/post-images/1579507842822.png" alt="" loading="lazy"></figure>
+<p>这篇配置通篇都可以拿去放到百度翻译里翻译<br>
+你会发现通过旁边的注释可以找到很多可以魔改的东西（福利啊！简直是福利！）比如核弹启用(好评的是关闭后直接核弹在合成表消失了)<br>
+以及工业tnt 和核反应堆爆炸范围 当然你也可以改为0 不爆炸不破坏地形(服务器福利)<br>
+那么也可以修改一些产生动能的效率比例 涡轮的耐久 蒸汽机钙化的最大值以及各种细节</p>
+<p>mcbbs上的新人发帖(搭建完自己的博客之后我就把它从mcbbs上挪到这了) 吞噬次元的qwq巨兽整理 配合魔改食用更佳</p>
+<p>最后喊一句 <strong>核电赛高！</strong></p>
 
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-01-20 / 3 min read</div>
-    </div>
-  </section>
+        </div>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://Fqwq.github.io/20200119184025">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Link Start! [新世界の门!自搭博客]</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        <p>抛开一切其他自搭博客的好处暂且不论..单说一点 假定你在假期的夜晚快乐的浏览着mcbbs，也许你是一个服务器腐竹，一个op，抑或只是一个某工业服高空流水偷电贼（划去）</p>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://Fqwq.github.io/c-S-ZvAx4">
+            <span class="flex-auto">Minecraft各类魔改</span>
+          </a>
+        
 
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-01-19 / 2 min read</div>
-    </div>
-  </section>
 
-        <div class="read-more">
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://Fqwq.github.io/20200122101553">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  失去意义的世界—泛谈小服务器玩家流失原因
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://Fqwq.github.io/20200119184025">
+                <h3 class="post-title">
+                  Link Start! [新世界の门!自搭博客]
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
 
-        </div>
+        
+
       </div>
     </div>
 
