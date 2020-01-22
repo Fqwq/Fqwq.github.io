@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>吞噬次元のqwq巨兽</title>
 <meta name="description" content="欢迎来到巨兽的个人blog空间！在这里，我会努力记录下来一切精彩！" />
-<link rel="shortcut icon" href="https://Fqwq.github.io/favicon.ico?v=1579664289638">
+<link rel="shortcut icon" href="https://Fqwq.github.io/favicon.ico?v=1579664695484">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://Fqwq.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://Fqwq.github.io/images/avatar.png?v=1579664289638" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://Fqwq.github.io/images/avatar.png?v=1579664695484" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">吞噬次元のqwq巨兽</h1>
       </div>
@@ -79,31 +79,40 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Link Start! [新世界の门!自搭博客]</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">调整ic2各个发电机组发电功率！(还想什么,削风电啊)</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-01-19 / 2 min read
+          2020-01-20 / 3 min read
         </div>
         
         <div class="post-content yue">
-          <p>抛开一切其他自搭博客的好处暂且不论..单说一点 假定你在假期的夜晚快乐的浏览着mcbbs，也许你是一个服务器腐竹，一个op，抑或只是一个某工业服高空流水偷电贼（划去）</p>
+          <p>关于ic2里的风电发电效率相信我不用再说 (笔者热核党 当发现我核电没有人家风电来的简单 还无脑发电还那么高..那种*了犬的心情...)<br>
+但事实上在配置文件里同各种设定都可更改  这无疑给想要在服务器做一些魔改以及特色的人士带来极大的便利...</p>
 <!-- more -->
-<p>，此时你在问答区看到了一个你可以回答的问题，可能你回答的好，又或者坏，但你把答案写的稍作详细且精美，随后挂在你的博客里，然后在他的回答下面扔出一个链接，附上一句&quot;这个问题以前遇到过 我的blog里有详细的介绍和解释&quot;</p>
-<p>——静</p>
-<p>（哇这个大佬是真的强啊 他有个自己的博客啊欸 哇这个界面 他的回答写在上面真的是行云流水即实在又高大上有层次有*格）</p>
-<p>此时你有没有想自搭博客 说! 不要隐瞒!</p>
-<p>然    而<br>
-<img src="https://Fqwq.github.io/post-images/1579486448371.png" alt="" loading="lazy"><br>
-<img src="https://Fqwq.github.io/post-images/1579486454241.jpg" alt="" loading="lazy"><br>
-以往其实看到别人拥有自己的网站并在上面写东西，确实是一件很有成就感的事情，但又因为技术门槛有点高，特别是使用wordpress或者hexo这类的（hexo他并不难啊 你到底是有多咸鱼呐？）（好吧 现阶段确实能力不达标 但是!有一天 我会回来把这句话去掉的!）随后我发现了<strong>gridea</strong>这个东西</p>
-<p>它大概就是通过一个文章管理软件Gridea同步到GitHub的代码托管里 且多余的部分都已经有官方的模板可以参考了，如果想锦上添花可以修改源码，只是想注重于内容的也可以无门槛使用!</p>
-<p>那么它的官方帮助手册已经写的非常简明见意了，我多说无益就贴个大佬链接趴<br>
-<a href="https://www.jianshu.com/p/f817a173d9b3">Ruuuuuuuua点击传送至大佬教程！</a></p>
+<p>那么ww<br>
+我们来看方法是什么（其实过分简单）<br>
+<strong>在.minecraft文件夹下config(并非mod文件夹)里找到ic2.ini</strong><br>
+找到Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量这里)</p>
+<p><em>如果使用notepad++会更好，此处为了方便演示以notepad++的打开方式举例，另外不同版本的ic2的该设定可能在配置的不同位置，请以Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量)为准</em></p>
+<p>在60行左右即可找到，从Base energy generation factors - increase for higher energy yield.往下后面带有代表赋值的等于号的数字那里，1.0表示倍数<br>
+可以修改这里的变量来进行修改发电机组的发电效率倍率<br>
+从第一个往下依次为发电机、地热、水力(配置中注释了说弃用，原因是大概有了更好的发电方式也就是风电)、太阳能、风、核、半流体油、半流体生物质、半流体生物乙醇、半流体沼气、固体、放射性同位素、电气   (机翻)<br>
+在个人测试之后 发现风力设置在0.75~0.8的系数里即可达到合理的发电 核电嘛(自己是核电党所以偏袒了核电发电效率)<br>
+需要注意的是热核电在这栏提高之后是无效的 因为热核实质是靠蒸汽进行动力转换为电力的<br>
+所以需要在下方的提高热产量那栏更改<br>
+——别告诉我看不懂英文 机翻不会嘛——</p>
+<figure data-type="image" tabindex="1"><img src="https://Fqwq.github.io/post-images/1579507842822.png" alt="" loading="lazy"></figure>
+<p>这篇配置通篇都可以拿去放到百度翻译里翻译<br>
+你会发现通过旁边的注释可以找到很多可以魔改的东西（福利啊！简直是福利！）比如核弹启用(好评的是关闭后直接核弹在合成表消失了)<br>
+以及工业tnt 和核反应堆爆炸范围 当然你也可以改为0 不爆炸不破坏地形(服务器福利)<br>
+那么也可以修改一些产生动能的效率比例 涡轮的耐久 蒸汽机钙化的最大值以及各种细节</p>
+<p>mcbbs上的新人发帖(搭建完自己的博客之后我就把它从mcbbs上挪到这了) 吞噬次元的qwq巨兽整理 配合魔改食用更佳</p>
+<p>最后喊一句 <strong>核电赛高！</strong></p>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://Fqwq.github.io/3eFIEWcrQ">
-            <span class="flex-auto">自搭博客</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://Fqwq.github.io/c-S-ZvAx4">
+            <span class="flex-auto">Minecraft各类魔改</span>
           </a>
         
 
@@ -111,15 +120,24 @@
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="https://Fqwq.github.io/20200120133606">
+              <a href="https://Fqwq.github.io/20200122101553">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
-                  调整ic2各个发电机组发电功率！(还想什么,削风电啊)
+                  失去意义的世界—泛谈小服务器玩家流失原因
                 </h3>
               </a>
             </div>
           
 
+          
+            <div class="next-post">
+              <a href="https://Fqwq.github.io/link-start-xin-shi-jie-nomen-zi-da-bo-ke">
+                <h3 class="post-title">
+                  Link Start! [新世界の门!自搭博客]
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
