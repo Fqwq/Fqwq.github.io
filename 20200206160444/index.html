@@ -34,7 +34,55 @@
             文章目录
           </p>
           <div class="toc-container hidden lg:block">
-            
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#oracle%E7%AE%80%E8%BF%B0">oracle简述</a></li>
+<li><a href="#oracle%E7%99%BB%E5%BD%95sql-plus%E5%B9%B6%E7%AE%A1%E7%90%86%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF">oracle登录sql plus并管理用户信息</a><br>
+*<br>
+*<br>
+* <a href="#%E7%99%BB%E5%BD%95%E8%AF%AD%E5%8F%A5">登录语句</a><br>
+* <a href="#%E6%9F%A5%E7%9C%8B%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">查看登录用户</a><br>
+* <a href="#%E8%A7%A3%E9%94%81%E6%88%96%E8%80%85%E9%94%81%E5%AE%9A%E7%94%A8%E6%88%B7">解锁或者锁定用户</a></li>
+</ul>
+</li>
+<li><a href="#%E8%A1%A8%E7%A9%BA%E9%97%B4">表空间</a>
+<ul>
+<li><a href="#%E8%A1%A8%E7%A9%BA%E9%97%B4-%E6%A6%82%E8%BF%B0">表空间 概述</a></li>
+<li><a href="#%E8%A1%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%86%E7%B1%BB">表空间的分类</a></li>
+<li><a href="#%E7%AE%A1%E7%90%86%E7%94%A8%E6%88%B7%E8%A1%A8%E7%A9%BA%E9%97%B4">管理用户表空间</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E7%9A%84%E8%A1%A8%E7%A9%BA%E9%97%B4">查看用户的表空间</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%9A%84%E9%BB%98%E8%AE%A4%E6%88%96%E4%B8%B4%E6%97%B6%E8%A1%A8%E7%A9%BA%E9%97%B4">设置用户的默认或临时表空间</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E8%A1%A8%E7%A9%BA%E9%97%B4">创建表空间</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E8%A1%A8%E7%A9%BA%E9%97%B4">修改表空间</a><br>
+*
+<ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E8%A1%A8%E7%A9%BA%E9%97%B4%E8%81%94%E6%9C%BA%E8%84%B1%E6%9C%BA%E7%8A%B6%E6%80%81">设置表空间联机/脱机状态</a></li>
+<li><a href="#%E5%A2%9E%E5%8A%A0%E4%B8%8E%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6">增加与删除数据文件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E8%A1%A8">表</a>
+<ul>
+<li><a href="#%E8%A1%A8-%E6%A6%82%E8%BF%B0">表 概述</a></li>
+<li><a href="#%E8%A1%A8%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">表中的数据类型</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E8%A1%A8">创建表</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E8%A1%A8">修改表</a><br>
+*<br>
+*<br>
+* <a href="#%E5%9C%A8%E8%A1%A8%E4%B8%AD%E5%A2%9E%E5%8A%A0%E5%AD%97%E6%AE%B5">在表中增加字段</a><br>
+* <a href="#%E4%BF%AE%E6%94%B9%E8%A1%A8%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">修改表字段数据类型</a><br>
+* <a href="#%E5%9C%A8%E8%A1%A8%E4%B8%AD%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5">在表中删除字段</a><br>
+* <a href="#%E5%9C%A8%E8%A1%A8%E4%B8%AD%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E5%90%8D">在表中修改字段名</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -79,61 +127,153 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">调整ic2各个发电机组发电功率！(还想什么,削风电啊)</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">oracle随记</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-01-20 / 3 min read
+          2020-02-06 / 4 min read
         </div>
         
         <div class="post-content yue">
-          <p>关于ic2里的风电发电效率相信我不用再说 (笔者热核党 当发现我核电没有人家风电来的简单 还无脑发电还那么高..那种*了犬的心情...)<br>
-但事实上在配置文件里同各种设定都可更改  这无疑给想要在服务器做一些魔改以及特色的人士带来极大的便利...</p>
+          <h3 id="oracle简述">oracle简述</h3>
+<p>oracle是一个关系型数据库</p>
+<blockquote>
+<p>关系型数据库：指采用了关系模型来组织数据的数据库。<br>
+关系模型指的就是二维表格模型，而一个关系型数据库就是由二维表及其之间的联系所组成的一个数据组织。</p>
+</blockquote>
 <!-- more -->
-<p>那么ww<br>
-我们来看方法是什么（其实过分简单）<br>
-<strong>在.minecraft文件夹下config(并非mod文件夹)里找到ic2.ini</strong><br>
-找到Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量这里)</p>
-<p><em>如果使用notepad++会更好，此处为了方便演示以notepad++的打开方式举例，另外不同版本的ic2的该设定可能在配置的不同位置，请以Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量)为准</em></p>
-<p>在60行左右即可找到，从Base energy generation factors - increase for higher energy yield.往下后面带有代表赋值的等于号的数字那里，1.0表示倍数<br>
-可以修改这里的变量来进行修改发电机组的发电效率倍率<br>
-从第一个往下依次为发电机、地热、水力(配置中注释了说弃用，原因是大概有了更好的发电方式也就是风电)、太阳能、风、核、半流体油、半流体生物质、半流体生物乙醇、半流体沼气、固体、放射性同位素、电气   (机翻)<br>
-在个人测试之后 发现风力设置在0.75~0.8的系数里即可达到合理的发电 核电嘛(自己是核电党所以偏袒了核电发电效率)<br>
-需要注意的是热核电在这栏提高之后是无效的 因为热核实质是靠蒸汽进行动力转换为电力的<br>
-所以需要在下方的提高热产量那栏更改<br>
-——别告诉我看不懂英文 机翻不会嘛——</p>
-<figure data-type="image" tabindex="1"><img src="https://Fqwq.github.io/post-images/1579507842822.png" alt="" loading="lazy"></figure>
-<p>这篇配置通篇都可以拿去放到百度翻译里翻译<br>
-你会发现通过旁边的注释可以找到很多可以魔改的东西（福利啊！简直是福利！）比如核弹启用(好评的是关闭后直接核弹在合成表消失了)<br>
-以及工业tnt 和核反应堆爆炸范围 当然你也可以改为0 不爆炸不破坏地形(服务器福利)<br>
-那么也可以修改一些产生动能的效率比例 涡轮的耐久 蒸汽机钙化的最大值以及各种细节</p>
-<p>mcbbs上的新人发帖(搭建完自己的博客之后我就把它从mcbbs上挪到这了) 吞噬次元的qwq巨兽整理 配合魔改食用更佳</p>
-<p>最后喊一句 <strong>核电赛高！</strong></p>
+<h3 id="oracle登录sql-plus并管理用户信息">oracle登录sql plus并管理用户信息</h3>
+<blockquote>
+<p>sys(系统管理员 最高权限)</p>
+<p>system sysman(本地管理员 次高权限)</p>
+<p>scott(普通用户 密码默认为tiger 默认未解锁)</p>
+</blockquote>
+<h6 id="登录语句">登录语句</h6>
+<p>​	username/password [@server] [AS SYSDBA|SYSOPER]</p>
+<h6 id="查看登录用户">查看登录用户</h6>
+<p>​	SHOW USER 查看当前用户</p>
+<p>​	desc dba_users 通过数据字典查看其他用户</p>
+<p>​	select username from dba_users 选取并查看在线用户</p>
+<h6 id="解锁或者锁定用户">解锁或者锁定用户</h6>
+<p>​	alter user username account LOCK|UNLOCK 解锁或锁定用户</p>
+<h2 id="表空间">表空间</h2>
+<h3 id="表空间-概述">表空间 概述</h3>
+<blockquote>
+<p>表空间是数据库的逻辑数据存储空间</p>
+<p>是数据库中开辟的一个个空间用于存储数据库的对象</p>
+<p>数据库可以由多个表空间构成</p>
+<p>使用describe/desc查看表空间</p>
+</blockquote>
+<h3 id="表空间的分类">表空间的分类</h3>
+<blockquote>
+<p>永久表空间	数据库中永久化的对象(视图等)</p>
+<p>临时表空间	数据库中执行过程的东西(执行操作后就删除)</p>
+<p>UNDO表空间	数据库被修改之前的数据(撤销操作的存储地址)</p>
+</blockquote>
+<h3 id="管理用户表空间">管理用户表空间</h3>
+<h3 id="查看用户的表空间">查看用户的表空间</h3>
+<blockquote>
+<p>dba_tablespaces 管理员登陆后查看的数据字典</p>
+<p>user_tablespaces 用户登录后查看的数据字典</p>
+</blockquote>
+<p>​	desc dba_tablespaces 查看管理员的数据字典</p>
+<blockquote>
+<p>tablespace_name 表空间名字</p>
+</blockquote>
+<p>​	select tablespace_name from dba_tablespaces 查看管理员表空间</p>
+<blockquote>
+<p>system 主要存储sys用户的表视图 系统表空间</p>
+<p>sysaux example示例 oracle示例使用的表空间</p>
+<p>undotbs1 存储撤销信息的表空间</p>
+<p>temp 存储sql处理的表 临时表空间</p>
+<p>users 主要存储数据库用户创建的对象</p>
+</blockquote>
+<h3 id="设置用户的默认或临时表空间">设置用户的默认或临时表空间</h3>
+<p>ALTER USER username DEFAULT|TEMPORARY TABLESPACE tablespace_name</p>
+<h3 id="创建表空间">创建表空间</h3>
+<p>CREATE [TEMPORARY] TABLESPACE tablespace_name TEMPFILE|DATAFILE 'xx.dbf' SIZE xx</p>
+<p>创建永久或临时表空间</p>
+<h3 id="修改表空间">修改表空间</h3>
+<h5 id="设置表空间联机脱机状态">设置表空间联机/脱机状态</h5>
+<p>ALTER TABLESPACE tablespace_name ONLINE|OFFLINE</p>
+<p>(数据字典中status字段为联机脱机状态)</p>
+<h5 id="增加与删除数据文件">增加与删除数据文件</h5>
+<p>ALTER TABLESPACE tablespace_name ADD DATAFILE 'xx.dbf' SIZE xx; 增加数据文件</p>
+<p>ALTER TABLESPACE tablespace_name DROP DATAFILE 'filename.dbf'; 删除数据文件 <em><strong>不能删除表空间第一个数据文件</strong></em></p>
+<h2 id="表">表</h2>
+<h3 id="表-概述">表 概述</h3>
+<p>表是表空间的基本储存单位</p>
+<p>表是一个二维结构 由行和列构成</p>
+<blockquote>
+<p>约定</p>
+<p>每一列数据都必须具有相同的数据类型</p>
+<p>列名唯一</p>
+<p>每一行数据的唯一性</p>
+</blockquote>
+<h3 id="表中的数据类型">表中的数据类型</h3>
+<blockquote>
+<p><strong>数值型</strong></p>
+<p>NUMBER(p,s) p有效位数 s小数点后位数</p>
+<p>FLOAT(n) 存储二进制数据 转换时需要在数据*0.30103</p>
+<p>**字符型 **</p>
+<p>CHAR(n) 最大值为2000</p>
+<p>NCHAR(n) 最大值为1000</p>
+<p>VARCHAR(n) 最大值为4000</p>
+<p>NVARCHAR(n) 最大值为4000</p>
+<p><strong>日期型</strong></p>
+<p>DATE</p>
+<p>TMIESTAMP 时间戳类型</p>
+<p><strong>其他类型</strong></p>
+<p>BLOB 存放4gb的数据 以2进制储存的数据</p>
+<p>CLOB 存放4gb的数据 以字符串储存的数据</p>
+</blockquote>
+<h3 id="创建表">创建表</h3>
+<pre><code class="language-sql">CREATE TABLE table_name
+(	
+    column_name datatype , ...
+	);
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE userinfo
+(	id number(6,0),
+    username varchar2(20),
+	userpwd varchar2(20),
+ 	email varchar2(30),
+	regdate date	);
+</code></pre>
+<h3 id="修改表">修改表</h3>
+<h6 id="在表中增加字段">在表中增加字段</h6>
+<pre><code class="language-sql">ALTER TABLE table_name ADD column_name datatype;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo ADD remarks varchar2(500);
+</code></pre>
+<h6 id="修改表字段数据类型">修改表字段数据类型</h6>
+<pre><code class="language-sql">ALTER TABLE table_name MODIFY column_name datatype;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo MODIFY remarks varchar2(400);
+</code></pre>
+<p>修改时没有数据才能够实现</p>
+<h6 id="在表中删除字段">在表中删除字段</h6>
+<pre><code class="language-sql">ALTER TABLE table_name DROP COLUMN column_name;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo DROP COLUMN remarks;
+</code></pre>
+<h6 id="在表中修改字段名">在表中修改字段名</h6>
+<pre><code class="language-sql">ALTER TABLE table_name RENAME COLUMN column_name TO new_column_name;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo RENAME COLUMN email TO new_email;
+</code></pre>
 
         </div>
 
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://Fqwq.github.io/c-S-ZvAx4">
-            <span class="flex-auto">Minecraft各类魔改</span>
-          </a>
         
 
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://Fqwq.github.io/20200122101553">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  失去意义的世界—泛谈小服务器玩家流失原因
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://Fqwq.github.io/20200119184025">
+              <a href="https://Fqwq.github.io/20200122101553">
                 <h3 class="post-title">
-                  Link Start! [新世界の门!自搭博客]
+                  失去意义的世界—泛谈小服务器玩家流失原因
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>

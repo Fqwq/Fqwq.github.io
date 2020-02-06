@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Fqwq.github.io</id>
     <title>吞噬次元のqwq巨兽</title>
-    <updated>2020-01-23T12:26:40.066Z</updated>
+    <updated>2020-02-06T08:17:06.322Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Fqwq.github.io"/>
     <link rel="self" href="https://Fqwq.github.io/atom.xml"/>
@@ -10,6 +10,148 @@
     <logo>https://Fqwq.github.io/images/avatar.png</logo>
     <icon>https://Fqwq.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 吞噬次元のqwq巨兽</rights>
+    <entry>
+        <title type="html"><![CDATA[oracle随记]]></title>
+        <id>https://Fqwq.github.io/20200206160444</id>
+        <link href="https://Fqwq.github.io/20200206160444">
+        </link>
+        <updated>2020-02-06T08:04:44.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="oracle简述">oracle简述</h3>
+<p>oracle是一个关系型数据库</p>
+<blockquote>
+<p>关系型数据库：指采用了关系模型来组织数据的数据库。<br>
+关系模型指的就是二维表格模型，而一个关系型数据库就是由二维表及其之间的联系所组成的一个数据组织。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="oracle简述">oracle简述</h3>
+<p>oracle是一个关系型数据库</p>
+<blockquote>
+<p>关系型数据库：指采用了关系模型来组织数据的数据库。<br>
+关系模型指的就是二维表格模型，而一个关系型数据库就是由二维表及其之间的联系所组成的一个数据组织。</p>
+</blockquote>
+<!-- more -->
+<h3 id="oracle登录sql-plus并管理用户信息">oracle登录sql plus并管理用户信息</h3>
+<blockquote>
+<p>sys(系统管理员 最高权限)</p>
+<p>system sysman(本地管理员 次高权限)</p>
+<p>scott(普通用户 密码默认为tiger 默认未解锁)</p>
+</blockquote>
+<h6 id="登录语句">登录语句</h6>
+<p>​	username/password [@server] [AS SYSDBA|SYSOPER]</p>
+<h6 id="查看登录用户">查看登录用户</h6>
+<p>​	SHOW USER 查看当前用户</p>
+<p>​	desc dba_users 通过数据字典查看其他用户</p>
+<p>​	select username from dba_users 选取并查看在线用户</p>
+<h6 id="解锁或者锁定用户">解锁或者锁定用户</h6>
+<p>​	alter user username account LOCK|UNLOCK 解锁或锁定用户</p>
+<h2 id="表空间">表空间</h2>
+<h3 id="表空间-概述">表空间 概述</h3>
+<blockquote>
+<p>表空间是数据库的逻辑数据存储空间</p>
+<p>是数据库中开辟的一个个空间用于存储数据库的对象</p>
+<p>数据库可以由多个表空间构成</p>
+<p>使用describe/desc查看表空间</p>
+</blockquote>
+<h3 id="表空间的分类">表空间的分类</h3>
+<blockquote>
+<p>永久表空间	数据库中永久化的对象(视图等)</p>
+<p>临时表空间	数据库中执行过程的东西(执行操作后就删除)</p>
+<p>UNDO表空间	数据库被修改之前的数据(撤销操作的存储地址)</p>
+</blockquote>
+<h3 id="管理用户表空间">管理用户表空间</h3>
+<h3 id="查看用户的表空间">查看用户的表空间</h3>
+<blockquote>
+<p>dba_tablespaces 管理员登陆后查看的数据字典</p>
+<p>user_tablespaces 用户登录后查看的数据字典</p>
+</blockquote>
+<p>​	desc dba_tablespaces 查看管理员的数据字典</p>
+<blockquote>
+<p>tablespace_name 表空间名字</p>
+</blockquote>
+<p>​	select tablespace_name from dba_tablespaces 查看管理员表空间</p>
+<blockquote>
+<p>system 主要存储sys用户的表视图 系统表空间</p>
+<p>sysaux example示例 oracle示例使用的表空间</p>
+<p>undotbs1 存储撤销信息的表空间</p>
+<p>temp 存储sql处理的表 临时表空间</p>
+<p>users 主要存储数据库用户创建的对象</p>
+</blockquote>
+<h3 id="设置用户的默认或临时表空间">设置用户的默认或临时表空间</h3>
+<p>ALTER USER username DEFAULT|TEMPORARY TABLESPACE tablespace_name</p>
+<h3 id="创建表空间">创建表空间</h3>
+<p>CREATE [TEMPORARY] TABLESPACE tablespace_name TEMPFILE|DATAFILE 'xx.dbf' SIZE xx</p>
+<p>创建永久或临时表空间</p>
+<h3 id="修改表空间">修改表空间</h3>
+<h5 id="设置表空间联机脱机状态">设置表空间联机/脱机状态</h5>
+<p>ALTER TABLESPACE tablespace_name ONLINE|OFFLINE</p>
+<p>(数据字典中status字段为联机脱机状态)</p>
+<h5 id="增加与删除数据文件">增加与删除数据文件</h5>
+<p>ALTER TABLESPACE tablespace_name ADD DATAFILE 'xx.dbf' SIZE xx; 增加数据文件</p>
+<p>ALTER TABLESPACE tablespace_name DROP DATAFILE 'filename.dbf'; 删除数据文件 <em><strong>不能删除表空间第一个数据文件</strong></em></p>
+<h2 id="表">表</h2>
+<h3 id="表-概述">表 概述</h3>
+<p>表是表空间的基本储存单位</p>
+<p>表是一个二维结构 由行和列构成</p>
+<blockquote>
+<p>约定</p>
+<p>每一列数据都必须具有相同的数据类型</p>
+<p>列名唯一</p>
+<p>每一行数据的唯一性</p>
+</blockquote>
+<h3 id="表中的数据类型">表中的数据类型</h3>
+<blockquote>
+<p><strong>数值型</strong></p>
+<p>NUMBER(p,s) p有效位数 s小数点后位数</p>
+<p>FLOAT(n) 存储二进制数据 转换时需要在数据*0.30103</p>
+<p>**字符型 **</p>
+<p>CHAR(n) 最大值为2000</p>
+<p>NCHAR(n) 最大值为1000</p>
+<p>VARCHAR(n) 最大值为4000</p>
+<p>NVARCHAR(n) 最大值为4000</p>
+<p><strong>日期型</strong></p>
+<p>DATE</p>
+<p>TMIESTAMP 时间戳类型</p>
+<p><strong>其他类型</strong></p>
+<p>BLOB 存放4gb的数据 以2进制储存的数据</p>
+<p>CLOB 存放4gb的数据 以字符串储存的数据</p>
+</blockquote>
+<h3 id="创建表">创建表</h3>
+<pre><code class="language-sql">CREATE TABLE table_name
+(	
+    column_name datatype , ...
+	);
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE userinfo
+(	id number(6,0),
+    username varchar2(20),
+	userpwd varchar2(20),
+ 	email varchar2(30),
+	regdate date	);
+</code></pre>
+<h3 id="修改表">修改表</h3>
+<h6 id="在表中增加字段">在表中增加字段</h6>
+<pre><code class="language-sql">ALTER TABLE table_name ADD column_name datatype;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo ADD remarks varchar2(500);
+</code></pre>
+<h6 id="修改表字段数据类型">修改表字段数据类型</h6>
+<pre><code class="language-sql">ALTER TABLE table_name MODIFY column_name datatype;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo MODIFY remarks varchar2(400);
+</code></pre>
+<p>修改时没有数据才能够实现</p>
+<h6 id="在表中删除字段">在表中删除字段</h6>
+<pre><code class="language-sql">ALTER TABLE table_name DROP COLUMN column_name;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo DROP COLUMN remarks;
+</code></pre>
+<h6 id="在表中修改字段名">在表中修改字段名</h6>
+<pre><code class="language-sql">ALTER TABLE table_name RENAME COLUMN column_name TO new_column_name;
+</code></pre>
+<pre><code class="language-sql">ALTER TABLE userinfo RENAME COLUMN email TO new_email;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[失去意义的世界—泛谈小服务器玩家流失原因]]></title>
         <id>https://Fqwq.github.io/20200122101553</id>
