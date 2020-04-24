@@ -2,11 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Fqwq.github.io</id>
     <title>吞噬次元的巨兽 的小破站</title>
-    <updated>2020-04-24T13:41:45.494Z</updated>
+    <updated>2020-04-24T13:46:32.220Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Fqwq.github.io"/>
     <link rel="self" href="https://Fqwq.github.io/atom.xml"/>
-    <subtitle>欢迎来到巨兽的个人blog空间！在这里，我会努力记录下来一切精彩！</subtitle>
+    <subtitle>欢迎来到巨兽的小破站！
+巨兽时常会在这里更新一些关于minecraft魔改的奇奇怪怪的东西！</subtitle>
     <logo>https://Fqwq.github.io/images/avatar.png</logo>
     <icon>https://Fqwq.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 吞噬次元的巨兽 的小破站</rights>
