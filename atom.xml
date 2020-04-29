@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Fqwq.github.io</id>
     <title>吞噬次元的巨兽 的小破站</title>
-    <updated>2020-04-29T06:30:02.195Z</updated>
+    <updated>2020-04-29T06:33:41.839Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Fqwq.github.io"/>
     <link rel="self" href="https://Fqwq.github.io/atom.xml"/>
@@ -40,12 +40,12 @@
 </code></pre>
 <p>如果try块出现异常程序会停止异常，然后交由catch处理块来处理异常</p>
 <pre><code class="language-java">try{
-    System.out.println(&quot;请输入您的年龄:&quot;);
+    System.out.println(&quot;pleace print your age:&quot;);
     Scanner input = new Scanner(&quot;System.in&quot;);
     int age = input.nextInt();
-    System.out.println(&quot;十年后你&quot;+(age + 10)+&quot;岁&quot;);
+    System.out.println(&quot;ten years later you are&quot;+(age + 10));
 }catch (InputMismatchException e){
-    System.out.println(&quot;你应该输入整数&quot;);
+    System.out.println(&quot;you must print whole number&quot;);
 }
 </code></pre>
 <p>try块中的scanner类主要用于输入</p>
