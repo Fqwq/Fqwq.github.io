@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="description" content="关于ic2里的风电发电效率相信我不用再说
-但事实上在配置文件里同各种设定都可更改  这无疑给想要在服务器做一些魔改以及特色方面的人带来极大的便利
-
-在.minecraft文件夹下config(并非mod文件夹)里找到ic2.ini
-找到Ba..." />
+<meta name="description" content="异常简述
+有异于常态，和正常情况不一样，有错误出现。
+阻止当前方法或作用域，称之为异常
+所有异常都继承于一个类，其名为Throwable类(万恶之源)
+而继承于Throwable的最大的两个子类分别为Error类和Exception类
+Er..." />
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<title>调整ic2各个发电机体系发电功率！[minecraft魔改] | 吞噬次元的巨兽 的小破站</title>
+<title>Java中的异常处理 | 吞噬次元的巨兽 的小破站</title>
 <style amp-custom>
 body {
     width: 100vw;
@@ -2500,7 +2501,7 @@ footer {
 </style>
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<link rel="canonical" href="https://Fqwq.github.io/20200120153606/" />
+<link rel="canonical" href="https://Fqwq.github.io/java-zhong-de-yi-chang-chu-li/" />
 <link rel="shortcut icon" href="https://Fqwq.github.io/favicon.ico?v=1588140309849">
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
@@ -2513,7 +2514,7 @@ footer {
 
 <script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>
 
-<link rel="alternate" type="application/atom+xml" title="调整ic2各个发电机体系发电功率！[minecraft魔改] | 吞噬次元的巨兽 的小破站 - Atom Feed" href="https://Fqwq.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Java中的异常处理 | 吞噬次元的巨兽 的小破站 - Atom Feed" href="https://Fqwq.github.io/atom.xml">
 
   
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
@@ -2593,17 +2594,14 @@ var _hmt = _hmt || [];
 
       <div class="article-info">
         
-          <div class="flex-box meta-category">
-            <a class="post-cate" href="https://Fqwq.github.io/c-S-ZvAx4/">Minecraft各类魔改</a></div>
-          
         <h2 class="article-title">
-          <a href="https://Fqwq.github.io/20200120153606/">调整ic2各个发电机体系发电功率！[minecraft魔改]</a>
+          <a href="https://Fqwq.github.io/java-zhong-de-yi-chang-chu-li/">Java中的异常处理</a>
         </h2>
         <div class="flex-box">
           <div class="flex-box post-meta-box">
             <a class="post-meta" href="https://Fqwq.github.io"><span
                 class="iconfont icon-mr-postmeta"></span>吞噬次元的巨兽</a>
-            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2020 年 01	月 20日</span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2020 年 04	月 29日</span>
             
 
 
@@ -2611,49 +2609,75 @@ var _hmt = _hmt || [];
         </div>
       </div>
       <div class="content">
-        <p>关于ic2里的风电发电效率相信我不用再说<br>
-但事实上在配置文件里同各种设定都可更改  这无疑给想要在服务器做一些魔改以及特色方面的人带来极大的便利</p>
-<!-- more -->
-<p><strong>在.minecraft文件夹下config(并非mod文件夹)里找到ic2.ini</strong></p>
-<p>找到Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量这里)</p>
-<p>如果使用notepad++会更好，此处为了方便演示以notepad++的打开方式举例，另外不同版本的ic2的该设定可能在配置的不同位置，请以Base energy generation factors - increase for higher energy yield.(基本能源效率因素 提高能源产量)为准</p>
-<p>在60行左右即可找到，从Base energy generation factors - increase for higher energy yield.往下后面带有代表赋值的等于号的数字那里，1.0表示倍数<br>
-可以修改这里的变量来进行修改发电机组的发电效率倍率<br>
-从第一个往下依次为发电机、地热、水力(配置中注释了说弃用，原因是大概有了更好的发电方式也就是风电)、太阳能、风、核、半流体油、半流体生物质、半流体生物乙醇、半流体沼气、固体、放射性同位素、电气   (机翻)<br>
-在个人测试之后 发现风力设置在0.75~0.8的系数里即可达到合理的发电 核电嘛(自己是核电党所以偏袒了核电发电效率)<br>
-需要注意的是热核电在这栏提高之后是无效的 因为热核实质是靠蒸汽进行动力转换为电力的<br>
-所以需要在下方的提高热产量那栏更改<br>
-——别告诉我看不懂英文 机翻不会嘛——<br>
-以下是部分实例</p>
-<p>; Base energy generation factors - increase for higher energy yield.<br>
-[balance / energy / generator]<br>
-generator = 1.0    //发电机(可能是总系数) 1.0倍输出电量(下简称倍)<br>
-geothermal = 1.0    //地热发电 1.0倍<br>
-; Deprecated, because of Kinetic Watermill<br>
-water = 1.0    //水力发电 1.0倍<br>
-solar = 1.0    //太阳能 1.0倍<br>
-; Deprecated, because of Kinetic Windmill<br>
-wind = 0.75    //风力发电 0.75倍<br>
-nuclear = 1.25     //核能发电 1.25倍(此处应注意不指热核 热核请修改更下面的蒸汽倍率)<br>
-semiFluidOil = 1.0     //(意义不明)<br>
-semiFluidFuel = 1.0    //(意义不明)<br>
-semiFluidBiomass = 1.0     //(意义不明)<br>
-semiFluidBioethanol = 1.0      //(意义不明)<br>
-semiFluidBiogas = 1.0      //(意义不明)<br>
-Stirling = 1.0     //斯特林发电 1.0倍<br>
-Kinetic = 1.0     //动能发电 1.0倍<br>
-radioisotope = 1.0     //放射性同位素温差发电 1.0倍</p>
-<p>这篇配置通篇都可以拿去放到百度翻译里翻译<br>
-你会发现通过旁边的注释可以找到很多可以魔改的东西(福利啊！简直是福利！)比如核弹启用(好评的是关闭后直接核弹在合成表消失了)<br>
-以及工业tnt 和核反应堆爆炸范围 当然你也可以改为0 不爆炸不破坏地形(服务器福利)<br>
-那么也可以修改一些产生动能的效率比例 涡轮的耐久 蒸汽机钙化的最大值以及各种细节</p>
-<p>mcbbs上的新人发帖(搭建完自己的博客之后我就把它从mcbbs上挪到这了)<br>
-吞噬次元的巨兽整理<br>
-配合魔改食用更佳</p>
-<p>最后喊一句 <strong>核电赛高！</strong></p>
+        <h3 id="异常简述">异常简述</h3>
+<p>有异于常态，和正常情况不一样，有错误出现。</p>
+<p>阻止当前方法或作用域，称之为异常</p>
+<p>所有异常都继承于一个类，其名为Throwable类(万恶之源)</p>
+<p>而继承于Throwable的最大的两个子类分别为Error类和Exception类</p>
+<p>Error类主要指程序无法处理的错误</p>
+<p>Exception中RuntimeExpcetion异常为非检查异常，会由java虚拟机自动抛出并自动捕获，此类出现错误出现主要是因为代码本身出现了问题，应当去从逻辑上改进代码，四类非检查异常依次对应的信息↓</p>
+<blockquote>
+<p>空指针异常 NullPointerException</p>
+<p>数组下标越界异常 ArrayIndexOutOfBoundsException</p>
+<p>类型转换异常 ClassCastException</p>
+<p>算数异常 ArithmeticException</p>
+</blockquote>
+<p>检查异常需要手动添加捕获以及处理语句</p>
+<h3 id="使用try-catch-final来处理异常">使用try catch final来处理异常</h3>
+<pre><code class="language-java">try{
+    //一些会抛出异常的方法
+}catch(Exception e){
+    //处理该异常的代码块
+}
+</code></pre>
+<p>如果try块出现异常程序会停止异常，然后交由catch处理块来处理异常</p>
+<pre><code class="language-java">try{
+    System.out.println(&quot;请输入您的年龄:&quot;);
+    Scanner input = new Scanner(&quot;System.in&quot;);
+    int age = input.nextInt();
+    System.out.println(&quot;十年后你&quot;+(age + 10)+&quot;岁&quot;);
+}catch (InputMismatchException e){
+    System.out.println(&quot;你应该输入整数&quot;);
+}
+</code></pre>
+<p>try块中的scanner类主要用于输入</p>
+<pre><code class="language-java">import java.util.Scanner;
+//实例化
+Scanner scan = new Scanner(System.in);
+String info = scan.next(); 
+</code></pre>
+<blockquote>
+<p>next() 与 nextLine() 区别</p>
+<p>next():</p>
+<ul>
+<li>1、一定要读取到有效字符后才可以结束输入。</li>
+<li>2、对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。</li>
+<li>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符。</li>
+<li>next() 不能得到带有空格的字符串。</li>
+</ul>
+<p>nextLine()：</p>
+<ul>
+<li>1、以Enter为结束符,也就是说 nextLine()方法返回的是输入回车之前的所有字符。</li>
+<li>2、可以获得空白。</li>
+</ul>
+</blockquote>
 
       </div>
 
+      
+      <nav class="post-nav">
+        
+        <div class="nav-previous">
+          <a class="post-nav-link-active" title="Java中的异常处理" href="https://Fqwq.github.io/20200429100626/">上一篇文章</a>
+        </div>
+        
+        
+        <div class="nav-next">
+          <a class="post-nav-link-active" title="调整ic2各个发电机体系发电功率！[minecraft魔改]" href="https://Fqwq.github.io/20200120153606/">下一篇文章</a>
+          
+
+        </div>
+      </nav>
       
 
       
@@ -2688,8 +2712,6 @@ radioisotope = 1.0     //放射性同位素温差发电 1.0倍</p>
       
 
       <div class="post-tags">
-        
-        <a href="https://Fqwq.github.io/c-S-ZvAx4/" rel="tag">Minecraft各类魔改</a>        
                
       </div>
 
@@ -2702,7 +2724,7 @@ radioisotope = 1.0     //放射性同位素温差发电 1.0倍</p>
   <div id="respond" class="comment-respond">
     <amp-iframe width=600 height=200 layout="responsive"
       sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable
-      src="#https://Fqwq.github.io/20200120153606/">
+      src="#https://Fqwq.github.io/java-zhong-de-yi-chang-chu-li/">
       <div overflow tabindex=0 role=button aria-label="Load more"
         style="display:block;font-size:12px;font-weight:500;font-family:Helvetica Neue, arial, sans-serif;text-align:center;line-height:1.1;padding:12px 16px;border-radius:4px;background:rgba(29,47,58,0.6);color:rgb(255,255,255)">
         Load more
